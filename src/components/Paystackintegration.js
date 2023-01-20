@@ -8,6 +8,9 @@ const Paystactintegration = ()=>{
     const [amount, setAmount] = useState("")
     const [first_name, setFirst_name] = useState("")
     const [last_name, setLast_name] = useState("")
+    const submit_to_db = ()=>{
+        console.log("Submited to DB")
+    }
     const pay_with_paystack =(e)=>{
         e.preventDefault()
         const paystack = new PayStackPop()
@@ -22,6 +25,7 @@ const Paystactintegration = ()=>{
                 alert(message)
                 setAmount("")
                 setEmail("")
+                submit_to_db()
             },
             onCancel(){
                 alert("You have cancelled the transaction")
@@ -29,6 +33,7 @@ const Paystactintegration = ()=>{
         })
     }
     return(
+    <div className="paystack_form">
         <Container>
             <Segment inverted>
                 <Form inverted>
@@ -40,6 +45,7 @@ const Paystactintegration = ()=>{
                 </Form>
             </Segment>
         </Container>
+    </div>
     )
 }
 
