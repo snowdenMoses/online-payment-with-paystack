@@ -25,4 +25,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: snowdenmoses/react_app_on_docker:latest
+          tags: snowdenmoses/paystack-react-payment-app:latest
